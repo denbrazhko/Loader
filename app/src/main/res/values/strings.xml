@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Loader</string>
+    <string name="title_normal">Изучайте</string>
+    <string name="title_blue">актуальные\nтемы</string>
+    <string name="fab_description" />
+    <string name="courses">курсов</string>
+</resources>
