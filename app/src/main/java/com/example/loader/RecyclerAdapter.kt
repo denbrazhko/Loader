@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.loader.models.DataX
-import com.example.loader.models.Group
+import com.example.loader.models.Data
 
-class RecyclerAdapter(private val context: Context, private val dataList:List<DataX>)
+class RecyclerAdapter(private val context: Context, private val dataList:List<Data>)
     : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

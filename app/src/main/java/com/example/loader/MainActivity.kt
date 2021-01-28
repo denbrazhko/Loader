@@ -12,8 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.loader.models.DataX
-import com.example.loader.models.Group
+import com.example.loader.models.Data
 import com.example.loader.network.GetGroupsCallback
 import com.example.loader.network.GetGroupsWorker
 
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity(), GetGroupsCallback {
         GetGroupsWorker.execute(this)
     }
 
-    private fun initRecycler(data: List<DataX>) {
+    private fun initRecycler(data: List<Data>) {
         recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         adapter = RecyclerAdapter(this, data)
         recycler.adapter = adapter
@@ -87,7 +86,7 @@ class MainActivity : AppCompatActivity(), GetGroupsCallback {
         notifyError()
     }
 
-    override fun onSuccess(data: List<DataX>) {
+    override fun onSuccess(data: List<Data>) {
         hideProgress()
         initRecycler(data)
     }
